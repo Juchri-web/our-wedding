@@ -1,1 +1,45 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+}
+
+#language-toggle button {
+  margin: 0 5px;
+  border: 1px solid #aaa;
+  padding: 5px 8px;
+  background: white;
+  cursor: pointer;
+}
+
+main {
+  margin-top: 30px;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.85em;
+  color: #777;
+}
 
