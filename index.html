@@ -1,73 +1,48 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unsere Feier</title>
-  <meta name="robots" content="noindex, nofollow">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f7f7f7;
-      color: #333;
-      text-align: center;
-    }
-    header {
-      background: #4CAF50;
-      color: white;
-      padding: 40px 20px;
-    }
-    h1 { margin: 0; }
-    .card {
-      background: white;
-      margin: 30px auto;
-      padding: 20px;
-      max-width: 400px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .number {
-      font-size: 48px;
-      font-weight: bold;
-      color: #4CAF50;
-    }
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Unsere Hochzeit</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-<header>
-  <h1>🎉 Unsere Feier</h1>
-  <p>Wir freuen uns auf euch!</p>
-</header>
+  <!-- HEADER -->
+  <header>
+    <h1 data-de="Unsere Hochzeit" data-en="Our Wedding"></h1>
 
-<div class="card">
-  <h2>Eingeladene Gäste</h2>
-  <div class="number" id="invited">0</div>
-</div>
+    <!-- Sprachumschalter -->
+    <div id="language-toggle">
+      <button data-lang="de">DE</button>
+      <button data-lang="en">EN</button>
+    </div>
 
-<div class="card">
-  <h2>Zugesagt</h2>
-  <div class="number" id="accepted">0</div>
-</div>
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html" data-de="Startseite" data-en="Home"></a>
+      <a href="itinerary.html" data-de="Ablauf" data-en="Itinerary"></a>
+      <a href="logistics.html" data-de="Infos" data-en="Logistics"></a>
+      <a href="rsvp.html" data-de="Anmeldung" data-en="RSVP"></a>
+    </nav>
+  </header>
 
-<footer>
-  Erstellt mit ❤️ und GitHub Pages
-</footer>
+  <!-- CONTENT -->
+  <main>
+    <section>
+      <h2 data-de="Willkommen" data-en="Welcome"></h2>
+      <p data-de="Wir freuen uns auf die Feier mit euch!"
+         data-en="We're excited to celebrate with you!"></p>
+    </section>
+  </main>
 
-<script>
-  const invited = 42;
-  const accepted = 28;
+  <!-- FOOTER -->
+  <footer>
+    <p data-de="© Unsere Hochzeit" data-en="© Our Wedding"></p>
+  </footer>
 
-  document.getElementById("invited").textContent = invited;
-  document.getElementById("accepted").textContent = accepted;
-</script>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
