@@ -96,3 +96,28 @@ footer {
   color: #9b8b7c;
   font-size: 0.9rem;
 }
+
+/* --- Mobile Optimierungen --- */
+@media (max-width: 600px) {
+
+  .hero {
+    height: 60vh; /* etwas höher für Portrait-Fotos */
+    background-position: center top; /* Gesichter sichtbar machen */
+  }
+
+  .hero-text {
+    bottom: 20px;        /* höher über den unteren Bildrand */
+    left: 20px;          /* mehr Rand links */
+    right: 20px;         /* optional – verhindert Überlaufen */
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;   /* kleiner für mobile */
+    line-height: 1.2;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+}
+
