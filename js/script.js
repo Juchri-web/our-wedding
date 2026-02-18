@@ -5,15 +5,11 @@ function setLanguage(lang) {
     const text = el.getAttribute(`data-${lang}`);
     if (text) el.textContent = text;
   });
+
+  // Title separat behandeln
+  const title = document.querySelector("title");
+  if (title) {
+    const newTitle = title.getAttribute(`data-${lang}`);
+    if (newTitle) title.textContent = newTitle;
+  }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const saved = localStorage.getItem("lang") || "de";
-  setLanguage(saved);
-
-  document.querySelectorAll("#language-toggle button")
-    .forEach(btn => {
-      btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
-    });
-});
-
