@@ -1,115 +1,36 @@
-/* --- Grundlayout --- */
+/* --- Global Layout --- */
 body {
   margin: 0;
   font-family: "Petrona", serif;
   background: #faf7f4;
   color: #444;
+}
+
+.container {
   max-width: 900px;
   margin: auto;
   padding: 20px;
-  line-height: 1.6;
 }
 
-/* --- Header Bereich --- */
-header {
-  text-align: center;
-  padding: 40px 0 20px;
-}
-
-header h1 {
-  font-size: 2.7rem;
-  margin-bottom: 10px;
-  color: #6e4c3a; /* warm brown */
-  letter-spacing: 1px;
-}
-
-/* --- Navigation --- */
-nav {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
-
-nav a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #6e4c3a;
-  padding-bottom: 3px;
-  border-bottom: 2px solid transparent;
-  transition: 0.25s;
-}
-
-nav a:hover {
-  border-bottom: 2px solid #c2a28d;
-}
-
-/* --- Sprachumschalter --- */
-#language-toggle button {
-  margin: 0 5px;
-  border: 1px solid #c2a28d;
-  padding: 5px 10px;
-  background: white;
-  color: #6e4c3a;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.25s;
-}
-
-#language-toggle button:hover {
-  background: #c2a28d;
-  color: white;
-}
-
-/* --- Karten / Sektionen --- */
-section {
-  background: white;
-  padding: 25px;
-  margin: 25px 0;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-/* --- Typografie --- */
-h2 {
-  color: #6e4c3a;
-  font-size: 1.8rem;
-  margin-top: 0;
-}
-
-p {
-  font-size: 1.1rem;
-}
-
-/* --- Footer --- */
-footer {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #9b8b7c;
-}
-
-/* --- Hero Banner --- */
+/* --- Hero Banner Full Width --- */
 .hero {
   position: relative;
+  width: 100%;
   height: 55vh;
   min-height: 320px;
   background-image: url('../assets/images/hero.jpg');
   background-size: cover;
   background-position: center;
-  border-radius: 18px;
-  margin: 30px 0 50px;
+  background-repeat: no-repeat;
+  border-radius: 0 0 20px 20px;
   overflow: hidden;
 }
 
 .hero::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.28); /* leichtes Overlay */
+  inset: 0;
+  background: rgba(0, 0, 0, 0.32);
   backdrop-filter: brightness(0.8);
   z-index: 1;
 }
@@ -135,4 +56,74 @@ footer {
   margin: 8px 0 0;
   opacity: 0.95;
   font-weight: 300;
+}
+
+/* --- Header / Navigation --- */
+header {
+  text-align: center;
+  padding: 30px 0 10px;
+}
+
+nav {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #6e4c3a;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: 0.25s;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #c2a28d;
+}
+
+/* --- Language Toggle --- */
+#language-toggle {
+  margin-bottom: 10px;
+}
+
+#language-toggle button {
+  margin: 0 5px;
+  border: 1px solid #c2a28d;
+  padding: 5px 10px;
+  background: white;
+  color: #6e4c3a;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+#language-toggle button:hover {
+  background: #c2a28d;
+  color: white;
+}
+
+/* --- Sections --- */
+section {
+  background: white;
+  padding: 25px;
+  margin: 25px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+h2 {
+  color: #6e4c3a;
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+/* --- Footer --- */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9b8b7c;
 }
