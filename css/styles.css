@@ -20,7 +20,7 @@ body {
   min-height: 320px;
   background-image: url('../assets/images/hero.jpg');
   background-size: cover;
-  background-position: center top;   /* neu */
+  background-position: center;   /* neu */
   background-repeat: no-repeat;
   border-radius: 0;                  /* neu */
   overflow: hidden;
