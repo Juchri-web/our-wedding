@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Petrona:wght@300;400;600&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
+  
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Petrona:wght@300;400;600&display=swap" rel="stylesheet">
 
+  <!-- Titel sprachabhängig -->
   <title data-de="Unsere Hochzeit" data-en="Our Wedding"></title>
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
 
   <!-- HERO FULL WIDTH -->
@@ -23,16 +27,13 @@
   <!-- CONTENT CONTAINER -->
   <div class="container">
 
-    <!-- HEADER (jetzt richtig unter dem Hero platziert) -->
+    <!-- HEADER -->
     <header>
-
-      <!-- Sprachumschalter -->
       <div id="language-toggle">
         <button data-lang="de">DE</button>
         <button data-lang="en">EN</button>
       </div>
 
-      <!-- Navigation -->
       <nav>
         <a href="index.html" data-de="Startseite" data-en="Home"></a>
         <a href="itinerary.html" data-de="Ablauf" data-en="Itinerary"></a>
@@ -41,10 +42,9 @@
       </nav>
     </header>
 
-    <!-- MAIN CONTENT -->
     <main>
       <section>
-        <h2>Save the date!</h2>
+        <h2 data-de="Save the date!" data-en="Save the date!"></h2>
 
         <p data-de="Wir können es kaum erwarten, diesen besonderen Tag mit euch zu feiern."
            data-en="We can’t wait to celebrate this special day with you."></p>
@@ -54,12 +54,11 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
     <footer>
       <p data-de="© Unsere Hochzeit" data-en="© Our Wedding"></p>
     </footer>
 
-  </div> <!-- END CONTAINER -->
+  </div>
 
   <script src="js/script.js"></script>
 </body>
