@@ -44,13 +44,13 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 3rem;
-  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .hero-text p {
-  font-size: 1.35rem;
-  margin: 8px 0 0;
+  font-weight: 300;
+  opacity: 0.95;
 }
 
 /* Navigation */
@@ -62,41 +62,66 @@ header {
 nav {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  margin-top: 15px;
+  gap: 30px;
+  margin: 20px 0 10px;
 }
 
 nav a {
   text-decoration: none;
   font-weight: 600;
   color: #6e4c3a;
+  padding: 4px 0;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #c2a28d;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 /* Language buttons */
 #language-toggle button {
-  margin: 0 5px;
-  padding: 5px 10px;
+  margin: 0 6px;
+  padding: 6px 12px;
   border: 1px solid #c2a28d;
   background: white;
   color: #6e4c3a;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.25s;
+}
+
+#language-toggle button:hover {
+  background: #c2a28d;
+  color: white;
 }
 
 /* Section */
 section {
   background: white;
-  padding: 25px;
-  margin: 25px 0;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 32px;
+  margin: 36px 0;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.07);
 }
 
 footer {
-  margin-top: 40px;
+  margin-top: 50px;
+  padding: 20px 0;
   text-align: center;
-  color: #9b8b7c;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  color: #AFA399;
 }
 
 /* --- Mobile Optimierungen --- */
