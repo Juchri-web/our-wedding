@@ -1,43 +1,40 @@
 <svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-  <!-- Gold Gradient -->
+
   <defs>
     <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D3B275"/>
-      <stop offset="50%" stop-color="#B9975B"/>
-      <stop offset="100%" stop-color="#8A6B37"/>
+      <stop offset="0%" stop-color="#D4B277"/>
+      <stop offset="40%" stop-color="#C4A064"/>
+      <stop offset="100%" stop-color="#8C6B3A"/>
     </linearGradient>
   </defs>
 
   <!-- Outer Circle -->
-  <circle cx="250" cy="250" r="200" fill="none" stroke="url(#gold)" stroke-width="4"/>
+  <circle cx="250" cy="250" r="200"
+          stroke="url(#gold)" stroke-width="4" fill="none"/>
 
   <!-- Inner Circle -->
-  <circle cx="250" cy="250" r="185" fill="none" stroke="url(#gold)" stroke-width="2"/>
+  <circle cx="250" cy="250" r="185"
+          stroke="url(#gold)" stroke-width="2" fill="none"/>
 
-  <!-- J -->
-  <text x="208" y="275"
-        text-anchor="middle"
-        font-size="160"
-        font-family="Georgia, serif"
-        fill="url(#gold)"
-        letter-spacing="5">
-    J
-  </text>
-
-  <!-- C -->
-  <text x="300" y="275"
-        text-anchor="middle"
-        font-size="175"
-        font-family="Georgia, serif"
-        fill="url(#gold)"
-        letter-spacing="5">
-    C
-  </text>
-
-  <!-- Elegant Swash connecting J & C -->
-  <path d="M210 260 Q260 310 320 240"
-        stroke="url(#gold)"
-        stroke-width="6"
+  <!-- "J" (custom drawn) -->
+  <path d="M210 150
+           C210 120, 250 120, 250 150
+           L250 300
+           C250 340, 220 360, 190 345"
         fill="none"
-        stroke-linecap="round"/>
+        stroke="url(#gold)" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- "C" (custom drawn) -->
+  <path d="M330 180
+           C300 140, 230 140, 210 200
+           C190 260, 240 320, 310 300"
+        fill="none"
+        stroke="url(#gold)" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Decorative Swash between J and C -->
+  <path d="M220 270
+           C260 320, 310 260, 315 230"
+        fill="none"
+        stroke="url(#gold)" stroke-width="7" stroke-linecap="round"/>
+
 </svg>
