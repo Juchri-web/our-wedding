@@ -4,6 +4,8 @@ body {
   font-family: "Petrona", serif;
   background: #faf7f4;
   color: #444;
+  line-height: 1.6;
+  font-size: 1.08rem;
 }
 
 .container {
