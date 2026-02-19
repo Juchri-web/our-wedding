@@ -1,7 +1,43 @@
-<svg width="350" height="350" viewBox="0 0 350 350" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="175" cy="175" r="150" stroke="#C2A28D" stroke-width="3" fill="none"/>
-  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
-        font-family="Georgia, serif" font-size="120" fill="#6E4C3A" letter-spacing="4">
-    J &amp; C
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gold Gradient -->
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D3B275"/>
+      <stop offset="50%" stop-color="#B9975B"/>
+      <stop offset="100%" stop-color="#8A6B37"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Circle -->
+  <circle cx="250" cy="250" r="200" fill="none" stroke="url(#gold)" stroke-width="4"/>
+
+  <!-- Inner Circle -->
+  <circle cx="250" cy="250" r="185" fill="none" stroke="url(#gold)" stroke-width="2"/>
+
+  <!-- J -->
+  <text x="208" y="275"
+        text-anchor="middle"
+        font-size="160"
+        font-family="Georgia, serif"
+        fill="url(#gold)"
+        letter-spacing="5">
+    J
   </text>
+
+  <!-- C -->
+  <text x="300" y="275"
+        text-anchor="middle"
+        font-size="175"
+        font-family="Georgia, serif"
+        fill="url(#gold)"
+        letter-spacing="5">
+    C
+  </text>
+
+  <!-- Elegant Swash connecting J & C -->
+  <path d="M210 260 Q260 310 320 240"
+        stroke="url(#gold)"
+        stroke-width="6"
+        fill="none"
+        stroke-linecap="round"/>
 </svg>
