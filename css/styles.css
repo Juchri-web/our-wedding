@@ -168,7 +168,7 @@ section h2::before {
   line-height: 1;
 }
 
-/* --- Fullscreen Intro Overlay (fade in + fade out) --- */
+/* Fullscreen Intro Overlay (fade in + fade out) */
 #intro-overlay {
   position: fixed;
   inset: 0;
@@ -177,31 +177,25 @@ section h2::before {
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  opacity: 0;
-  animation: introSequence 3s ease-in-out forwards;
+  opacity: 1; /* Overlay starts visible */
+  animation: introFadeOut 2.4s ease forwards;
+  animation-delay: 1.2s; /* how long the logo stays before fading */
 }
 
 #intro-logo {
   width: 220px;
   opacity: 0;
   transform: scale(0.88);
-  animation: logoIntro 1.6s ease forwards;
-  animation-delay: 0.2s;
+  animation: introLogo 1.2s ease forwards;
 }
 
-@keyframes logoIntro {
+@keyframes introLogo {
   0%   { opacity: 0; transform: scale(0.88); }
-  40%  { opacity: 1; transform: scale(1); }
+  60%  { opacity: 1; transform: scale(1); }
   100% { opacity: 1; transform: scale(1); }
 }
 
-@keyframes introSequence {
-  0%   { opacity: 0; }
-  15%  { opacity: 1; }
-  70%  { opacity: 1; }
-  100% { opacity: 0; visibility: hidden; }
+@keyframes introFadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; visibility: hidden; }
 }
-
-
-
-
