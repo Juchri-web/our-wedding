@@ -209,14 +209,14 @@ section h2::before {
 .timeline {
   position: relative;
   margin: 40px 0;
-  padding-left: 60px;
+  padding-left: 110px; /* viel mehr Platz für die Zeit */
 }
 
 /* Vertical line */
 .timeline::before {
   content: "";
   position: absolute;
-  left: 30px;
+  left: 70px; /* Linie weiter nach rechts */
   top: 0;
   width: 2px;
   height: 100%;
@@ -228,7 +228,7 @@ section h2::before {
 /* Single event */
 .timeline-item {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   margin-bottom: 40px;
   position: relative;
 }
@@ -237,8 +237,8 @@ section h2::before {
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -6px;
-  top: 4px;
+  left: 63px;  /* Punkt sitzt exakt auf der Linie */
+  top: 6px;
   width: 14px;
   height: 14px;
   background: #faf7f4;
@@ -248,11 +248,12 @@ section h2::before {
 
 /* Time */
 .timeline-time {
-  min-width: 90px;
+  min-width: 90px;    /* mehr Platz für Uhrzeit */
+  text-align: right;
   font-weight: 600;
   color: #6e4c3a;
-  padding-top: 2px;
   padding-right: 10px;
+  padding-top: 2px;
 }
 
 /* Content card style */
