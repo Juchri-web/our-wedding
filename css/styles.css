@@ -216,7 +216,7 @@ section h2::before {
 .timeline::before {
   content: "";
   position: absolute;
-  left: 76px;             /* Linie sitzt fix links */
+  left: 118px;     /* Linie steht genau unter dem Punkt */
   top: 0;
   width: 2px;
   height: 100%;
@@ -237,7 +237,7 @@ section h2::before {
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: 70px;             /* exakt zur Linie ausgerichtet */
+  left: 110px;
   top: 6px;
   width: 14px;
   height: 14px;
@@ -249,12 +249,11 @@ section h2::before {
 
 /* Zeit-Spalte */
 .timeline-time {
-  min-width: 100px;
-  margin-left: 120px;     /* Abstand zur Linie → NICHT ÜBERLAPPEN */
-  text-align: left;
+  width: 80px;            /* fixe Spalte links */
+  text-align: right;      /* Uhrzeit rechtsbündig */
   font-weight: 600;
   color: #6e4c3a;
-  padding-top: 2px;
+  padding-right: 20px;    /* Abstand zum Punkt */
 }
 
 /* Content-Karte */
