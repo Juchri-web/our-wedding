@@ -293,32 +293,42 @@ section h2::before {
   margin-bottom: 0;
 }
 
-/* ---- MOBILE ---- */
+/* ---- MOBILE FIX ---- */
 @media (max-width: 600px) {
 
-  /* Linie weiter nach links, damit sie NICHT durch die Uhrzeit läuft */
+  /* Linie weiter ganz nach links */
   .timeline::before {
-    left: 20px;
+    left: 20px;             /* Linie ganz links */
   }
 
-  /* Punkt passend zur Linie */
+  /* Punkt sitzt korrekt auf der Linie */
   .timeline-item::before {
     left: 14px;
+    top: 8px;
   }
 
-  /* Uhrzeit links neben Kontent */
+  /* Timeline-Item wird vertikal, nicht horizontal */
   .timeline-item {
     flex-direction: column;
-    padding-left: 40px; /* Platz für Linie & Punkt */
-    gap: 6px;
+    align-items: flex-start;
+    padding-left: 40px;      /* Platz für Punkt + Linie */
+    gap: 4px;
   }
 
+  /* Uhrzeit unter dem Punkt */
   .timeline-time {
+    order: 1;                /* Reihenfolge: Punkt → Uhrzeit → Card */
     width: auto;
     text-align: left;
-    padding-right: 0;
-    padding-left: 4px;
+    padding: 0 0 0 0;
+    margin: 6px 0 0 0;
     font-size: 1rem;
+  }
+
+  /* Inhalt folgt unter der Uhrzeit */
+  .timeline-content {
+    order: 2;
+    width: 100%;
   }
 }
 
