@@ -211,16 +211,16 @@ section h2::before {
   margin: 40px 0;
 }
 
-/* Die vertikale Linie */
+/* Vertikale Linie */
 .timeline::before {
   content: "";
   position: absolute;
-  left: 90px;    /* DA steht künftig die Linie */
+  left: 90px;
   top: 0;
   width: 2px;
   height: 100%;
   background: #d8c3b4;
-  opacity: 0.4;
+  opacity: 0.5;
   border-radius: 2px;
 }
 
@@ -230,31 +230,40 @@ section h2::before {
   display: flex;
   gap: 20px;
   margin-bottom: 40px;
+
+  /* SCROLL ANIMATION DEFAULT STATE */
   opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Aktiv wenn sichtbar */
+.timeline-item.visible {
   animation: fadeSlideIn 0.8s ease forwards;
 }
-.timeline-item:nth-child(1) { animation-delay: 0.1s; }
-.timeline-item:nth-child(2) { animation-delay: 0.2s; }
-.timeline-item:nth-child(3) { animation-delay: 0.3s; }
-.timeline-item:nth-child(4) { animation-delay: 0.4s; }
-.timeline-item:nth-child(5) { animation-delay: 0.5s; }
-.timeline-item:nth-child(6) { animation-delay: 0.6s; }
 
+/* Stagger: Reihenfolge */
+.timeline-item:nth-child(1).visible { animation-delay: 0.1s; }
+.timeline-item:nth-child(2).visible { animation-delay: 0.2s; }
+.timeline-item:nth-child(3).visible { animation-delay: 0.3s; }
+.timeline-item:nth-child(4).visible { animation-delay: 0.4s; }
+.timeline-item:nth-child(5).visible { animation-delay: 0.5s; }
+.timeline-item:nth-child(6).visible { animation-delay: 0.6s; }
 
-/* Der Punkt auf der Linie */
+/* Punkt */
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: 84px;   /* exakt auf der Linie */
-  top: 8px;   /* statt 6px */
+  left: 84px;
+  top: 8px;
   width: 14px;
   height: 14px;
   background: #faf7f4;
   border: 2px solid #c2a28d;
   border-radius: 50%;
+  z-index: 2;
 }
 
-/* Die Uhrzeit links */
+/* Uhrzeit links */
 .timeline-time {
   letter-spacing: 0.3px;
   font-size: 0.95rem;
@@ -262,10 +271,10 @@ section h2::before {
   text-align: right;
   font-weight: 600;
   color: #6e4c3a;
-  padding-right: 20px;  /* Abstand zum Punkt */
+  padding-right: 20px;
 }
 
-/* Die Karte rechts */
+/* Content */
 .timeline-content {
   background: white;
   padding: 20px;
@@ -284,21 +293,36 @@ section h2::before {
   margin-bottom: 0;
 }
 
-
-/* Mobile */
+/* ---- MOBILE ---- */
 @media (max-width: 600px) {
-  .timeline {
-    padding-left: 22px;
+
+  /* Linie weiter nach links, damit sie NICHT durch die Uhrzeit läuft */
+  .timeline::before {
+    left: 20px;
   }
+
+  /* Punkt passend zur Linie */
+  .timeline-item::before {
+    left: 14px;
+  }
+
+  /* Uhrzeit links neben Kontent */
   .timeline-item {
     flex-direction: column;
-    gap: 10px;
+    padding-left: 40px; /* Platz für Linie & Punkt */
+    gap: 6px;
   }
+
   .timeline-time {
+    width: auto;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 4px;
     font-size: 1rem;
   }
 }
 
+/* ---- KEYFRAMES ---- */
 @keyframes fadeSlideIn {
   0% {
     opacity: 0;
@@ -309,4 +333,5 @@ section h2::before {
     transform: translateY(0);
   }
 }
+
 
