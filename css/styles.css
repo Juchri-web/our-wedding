@@ -209,14 +209,14 @@ section h2::before {
 .timeline {
   position: relative;
   margin: 40px 0;
-  padding-left: 30px;
+  padding-left: 60px;
 }
 
 /* Vertical line */
 .timeline::before {
   content: "";
   position: absolute;
-  left: 16px;
+  left: 30px;
   top: 0;
   width: 2px;
   height: 100%;
@@ -237,7 +237,7 @@ section h2::before {
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -14px;
+  left: -6px;
   top: 4px;
   width: 14px;
   height: 14px;
@@ -248,10 +248,11 @@ section h2::before {
 
 /* Time */
 .timeline-time {
-  min-width: 70px;
+  min-width: 90px;
   font-weight: 600;
   color: #6e4c3a;
   padding-top: 2px;
+  padding-right: 10px;
 }
 
 /* Content card style */
