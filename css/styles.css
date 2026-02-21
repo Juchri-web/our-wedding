@@ -209,14 +209,13 @@ section h2::before {
 .timeline {
   position: relative;
   margin: 40px 0;
-  padding-left: 0; /* nicht nötig, Linie wird absolut positioniert */
 }
 
-/* Vertikale Linie */
+/* Die vertikale Linie */
 .timeline::before {
   content: "";
   position: absolute;
-  left: 118px;     /* Linie steht genau unter dem Punkt */
+  left: 90px;    /* DA steht künftig die Linie */
   top: 0;
   width: 2px;
   height: 100%;
@@ -225,38 +224,37 @@ section h2::before {
   border-radius: 2px;
 }
 
-/* Einzelner Eintrag */
+/* Ein Eintrag */
 .timeline-item {
   position: relative;
   display: flex;
-  gap: 30px;
+  gap: 20px;
   margin-bottom: 40px;
 }
 
-/* Punkt auf der Linie */
+/* Der Punkt auf der Linie */
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: 110px;
+  left: 84px;   /* exakt auf der Linie */
   top: 6px;
   width: 14px;
   height: 14px;
   background: #faf7f4;
   border: 2px solid #c2a28d;
   border-radius: 50%;
-  z-index: 3;
 }
 
-/* Zeit-Spalte */
+/* Die Uhrzeit links */
 .timeline-time {
-  width: 80px;            /* fixe Spalte links */
-  text-align: right;      /* Uhrzeit rechtsbündig */
+  width: 80px;
+  text-align: right;
   font-weight: 600;
   color: #6e4c3a;
-  padding-right: 20px;    /* Abstand zum Punkt */
+  padding-right: 20px;  /* Abstand zum Punkt */
 }
 
-/* Content-Karte */
+/* Die Karte rechts */
 .timeline-content {
   background: white;
   padding: 20px;
