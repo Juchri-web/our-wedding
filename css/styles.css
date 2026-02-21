@@ -219,7 +219,7 @@ section h2::before {
   top: 0;
   width: 2px;
   height: 100%;
-  background: #c2a28d;
+  background: #d8c3b4;
   opacity: 0.4;
   border-radius: 2px;
 }
@@ -237,7 +237,7 @@ section h2::before {
   content: "";
   position: absolute;
   left: 84px;   /* exakt auf der Linie */
-  top: 6px;
+  top: 8px;   /* statt 6px */
   width: 14px;
   height: 14px;
   background: #faf7f4;
@@ -247,6 +247,8 @@ section h2::before {
 
 /* Die Uhrzeit links */
 .timeline-time {
+  letter-spacing: 0.3px;
+  font-size: 0.95rem;
   width: 80px;
   text-align: right;
   font-weight: 600;
