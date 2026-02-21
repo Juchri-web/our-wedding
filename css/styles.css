@@ -275,6 +275,49 @@ section h2::before {
   margin-bottom: 0;
 }
 
+/* FORCE TIMELINE FIX --------------------------------------------- */
+
+.timeline {
+  position: relative !important;
+  padding-left: 140px !important; /* viel Abstand zur Linie */
+}
+
+.timeline::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 90px !important;      /* Linie weit weg von der Zeit */
+  top: 0 !important;
+  width: 2px !important;
+  height: 100% !important;
+  background: #c2a28d !important;
+  opacity: 0.4 !important;
+}
+
+/* Punkt */
+.timeline-item::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 84px !important;     /* Punkt sitzt GENAU auf der Linie */
+  top: 10px !important;
+  width: 14px !important;
+  height: 14px !important;
+  background: #faf7f4 !important;
+  border: 2px solid #c2a28d !important;
+  border-radius: 50% !important;
+  z-index: 5 !important;
+}
+
+/* Zeit – eigene Spalte */
+.timeline-time {
+  display: block !important;
+  min-width: 90px !important;
+  text-align: right !important;
+  margin-right: 20px !important;
+  color: #6e4c3a !important;
+  font-weight: 600 !important;
+}
+
+
 /* Mobile */
 @media (max-width: 600px) {
   .timeline {
