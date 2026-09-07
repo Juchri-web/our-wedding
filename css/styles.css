@@ -133,7 +133,7 @@ footer {
   }
 
   .hero-text {
-    bottom: 20px;        /* höher über den unteren Bildrand */
+    bottom: 10px;        /* höher über den unteren Bildrand */
     left: 20px;          /* mehr Rand links */
     right: 20px;         /* optional – verhindert Überlaufen */
   }
