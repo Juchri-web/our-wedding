@@ -135,7 +135,7 @@ footer {
   .hero {
     height: 60vh;
     background-image: url('../assets/images/hero-mobile.jpg');
-    background-position: center top; /* Textzone oben im Bild */
+    background-position: center; /* Textzone oben im Bild */
   }
 
   .hero-text {
