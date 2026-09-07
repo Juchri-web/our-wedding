@@ -46,11 +46,13 @@ body {
 .hero-text h1 {
   font-weight: 400;
   letter-spacing: 0.5px;
+  margin-bottom: 0.2em;   /* NEU: kleiner Abstand nach unten */
 }
 
 .hero-text p {
   font-weight: 300;
   opacity: 0.95;
+  margin-top: 0;          /* NEU: keinen extra Abstand nach oben */
 }
 
 /* Navigation */
@@ -133,7 +135,7 @@ footer {
   }
 
   .hero-text {
-    bottom: 140px;        /* höher über den unteren Bildrand */
+    bottom: 260px;        /* höher über den unteren Bildrand */
     left: 20px;          /* mehr Rand links */
     right: 20px;         /* optional – verhindert Überlaufen */
   }
@@ -141,7 +143,7 @@ footer {
   .hero-text h1 {
     max-width: 12ch; /* Zeilenlänge angenehm begrenzen */
     font-size: 2.2rem;   /* kleiner für mobile */
-    line-height: 1.2;
+    line-height: 0,3;
   }
 
   .hero-text p {
