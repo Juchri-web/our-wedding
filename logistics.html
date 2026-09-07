@@ -28,7 +28,9 @@
       </nav>
     </header>
 
-    <main>
+  
+      <!-- Stichpunkte für später -->
+      <!--
       <section>
         <h2 data-de="Wichtige Informationen" data-en="Important Information"></h2>
 
@@ -43,8 +45,45 @@
         <p data-de="Die vollständigen Infos werden später ergänzt."
            data-en="Full information will be added later."></p>
       </section>
-    </main>
+      -->
 
+    <main>
+  <section id="infos" class="info-section">
+    <h2 data-de="Infos" data-en="Logistics"></h2>
+
+    <div class="info-grid">
+
+      <!-- Linke Spalte: Adresse -->
+      <div class="info-text">
+        <h3 data-de="Adresse" data-en="Address"></h3>
+
+        <p>
+          <span>Carrer Llucet, 19</span><br>
+          <span>03530 La Nucía, Alicante</span><br>
+          <span data-de="Spanien" data-en="Spain"></span>
+        </p>
+
+        <p>
+          <a href="https://www.google.com/maps?q=Carrer+Llucet+19+03530+La+Nucia+Alicante+Spain"
+             target="_blank" rel="noopener"
+             data-de="In Google Maps öffnen"
+             data-en="Open in Google Maps"></a>
+        </p>
+      </div>
+
+      <!-- Rechte Spalte: eingebettete Karte -->
+      <div class="info-map">
+        <iframe
+          src="https://www.google.com/maps?q=Carrer+Llucet+19+03530+La+Nucia+Alicante+Spain&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+</main>
     <footer>
       <p data-de="© Unsere Hochzeit" data-en="© Our Wedding"></p>
     </footer>
