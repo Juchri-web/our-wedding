@@ -124,6 +124,66 @@ section {
 .section-centered {
   text-align: center;
 }
+/* Infos / Logistics Layout */
+
+.info-section {
+  /* nutzt dein normales section-Card-Design,
+     hier könntest du bei Bedarf noch Spezielles ergänzen */
+}
+
+.info-grid {
+  display: flex;
+  gap: 32px;
+  align-items: stretch;
+  margin-top: 24px;
+}
+
+.info-text,
+.info-map {
+  flex: 1;
+}
+
+/* Text-Spalte */
+.info-text h3 {
+  margin-top: 0;
+  color: #6e4c3a;
+  font-size: 1.2rem;
+}
+
+.info-text p {
+  margin-bottom: 0.75rem;
+}
+
+.info-text a {
+  color: #6e4c3a;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(194,162,141,0.6);
+  padding-bottom: 1px;
+}
+
+.info-text a:hover {
+  border-bottom-color: rgba(194,162,141,1);
+}
+
+/* Maps-Spalte */
+.info-map iframe {
+  width: 100%;
+  min-height: 260px;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Responsiv: untereinander statt nebeneinander */
+@media (max-width: 800px) {
+  .info-grid {
+    flex-direction: column;
+  }
+
+  .info-map iframe {
+    min-height: 220px;
+  }
+}
 
 footer {
   margin-top: 50px;
